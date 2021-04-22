@@ -1,28 +1,33 @@
 function oper(numbers)  {
     
-    if(typeof(numbers[0])=="string"){
+    
 
-        for(let i=0;i<numbers.length;i++)   {
+    for(let i=0;i<numbers.length;i++)   {
+        if(typeof(numbers[i])=="string"){
             if(numbers[i].indexOf('@')){
-                
+                    
                 if(numbers[i].indexOf('@')!=-1){
                     let indexop=numbers[i].indexOf('@')
                     let muli=numbers[i].slice(indexop+1,numbers[i].length)
-                    
+                        
                     if(muli<1) {
-                        console.log("Some arguments are not numbers!");
+                        console.log("Invalid repeat!");
                         process.exit(1);
                     }
-        
+                    muli=muli*1;
+                    if(!Number.isInteger(muli)){
+                        console.log("Invalid repeat!");
+                        process.exit(1);
+                    }
+            
                     let muln=numbers[i].slice(0,indexop)
                     numbers.splice(i,1);
-        
+            
                     for(let j=0;j<muli;j++)
                         numbers.push(muln);  
                 }   
             }
         }
-        
     }
     return numbers.map((n) => parseFloat(n));
 }
