@@ -25,3 +25,15 @@ test("med([5, 1, 2, 3, 3]) should be 3", () => {
 test("med([1, 2, 4, 4]) should be 3", () => {
     expect(lib.med([1, 2, 4, 4])).toBe(3);
 });
+
+test("med([1@2, 3, 4]) should be 2", () => {
+    expect(lib.med(['1@2', 3, 4])).toBe(2);
+});
+
+test("min([-1, 1@2, 3, 4]) should be -1", () => {
+    expect(lib.min([-1, '1@2', 3, 4])).toBe(-1);
+});
+
+test("min([2, 2@2, 1, 3]) should be 1", () => {
+    expect(lib.min([2, '2@2', 1, 3])).toBe(1);
+});

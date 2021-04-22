@@ -11,18 +11,27 @@ let command = process.argv[2];
 
 let numbers = process.argv
     .slice(3, process.argv.length)
-    .map((n) => parseFloat(n));
-
-let indexop;
 
 for(let i=0;i<numbers.length;i++)   {
-    console.log(numbers[i]);
     if(numbers[i].indexOf('@')){
-        
-        console.log(numbers[i].indexOf('@'));
+            
+        if(numbers[i].indexOf('@')!=-1){
+            let indexop=numbers[i].indexOf('@')
+            let muli=numbers[i].slice(indexop+1,numbers[i].length)
+                
+            if(muli<1) {
+                console.log("Some arguments are not numbers!");
+                process.exit(1);
+            }
+            
+            let muln=numbers[i].slice(0,indexop)
+            numbers.splice(i,1);
+            i--;
+            for(let j=0;j<muli;j++)
+                numbers.push(muln);  
+        }   
     }
 }
-
 if (numbers.some((n) => isNaN(n))) {
    
     console.log("Some arguments are not numbers!");
