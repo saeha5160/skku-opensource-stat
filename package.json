@@ -1,0 +1,49 @@
+{
+  "_from": "skku-stat",
+  "_inBundle": false,
+  "_integrity": "sha512-FEHN++NYnJrBs9N96Yd7Prm4o9oUjb/Vml3Wk/cIpbrpiAeEV46w0dy0b+BoaCT31IiWQhXcrstQq59bFbPHQw==",
+  "_location": "/skku-stat",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "skku-stat",
+    "name": "skku-stat",
+    "escapedName": "skku-stat",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/skku-stat/-/skku-stat-0.1.3.tgz",
+  "_shasum": "864c0d7029dc31c30d6c3db0f74be3e9d90458a3",
+  "_spec": "skku-stat",
+  "_where": "D:\\school\\2020\\2학기\\오소실\\start",
+  "author": "",
+  "bin": {
+    "stat": "main.js"
+  },
+  "bugs": {
+    "url": "https://github.com/e-/skku-stat/issues"
+  },
+  "deprecated": false,
+  "description": "\"# skku-stat\"",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  },
+  "homepage": "https://github.com/e-/skku-stat#readme",
+  "license": "ISC",
+  "main": "main.js",
+  "name": "skku-stat",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/e-/skku-stat.git"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "version": "0.1.3",
+  "keywords": []
+}
